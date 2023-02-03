@@ -46,7 +46,7 @@ steps:
       buildVersionToDownload: latest
       allowPartiallySucceededBuilds: true
       artifactName: Bis Docs
-    condition: and(succeeded(), eq('${{ parameters.downloadCurrentBuildArtifacts }}', false))
+    condition: true
 
   # BIS Docs are pulled from the current build for the validation
   - task: DownloadBuildArtifacts@0
@@ -57,7 +57,7 @@ steps:
       pipeline: 6075
       allowPartiallySucceededBuilds: true
       artifactName: Bis Docs
-    condition: and(succeeded(), eq('${{ parameters.downloadCurrentBuildArtifacts }}', true))
+    condition: false
 
   - task: CopyFiles@2
     displayName: Copy Bis Docs to staging
@@ -70,7 +70,7 @@ steps:
     displayName: Download Pipeline Artifact - .updated.json
     inputs:
       buildType: specific
-      project: '2c48216e-e72f-48b4-a4eb-40ff1c04e8e4'
+      project: "2c48216e-e72f-48b4-a4eb-40ff1c04e8e4"
       definition: 7436 # iTwin.js/Docs/iTwin.js Docs - YAML
       allowPartiallySucceededBuilds: true
       buildVersionToDownload: latestFromBranch
