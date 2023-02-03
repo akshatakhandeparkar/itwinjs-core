@@ -15,7 +15,7 @@ import { EditCommandIpc, EditorIpc, editorIpcStrings } from "@itwin/editor-commo
 export type EditCommandType = typeof EditCommand;
 
 /**
- * An EditCommand performs an editing action on the backend. EditCommands are usually paired with and driven by EditTools on the frontend.
+ * An EditCommand performs an editing action on the backend that modifies an iModel. EditCommands are usually paired with and driven by EditTools on the frontend.
  * EditCommands have a *commandId* that uniquely identifies them, so they can be found via a lookup in the [[EditCommandAdmin]].
  * Every time an EditCommand runs, a new instance of (a subclass of) this class is created.
  * @beta
@@ -28,8 +28,8 @@ export class EditCommand implements EditCommandIpc {
   /** The iModel this EditCommand may modify. */
   public readonly iModel: IModelDb;
 
-  public constructor(iModel: IModelDb, ..._args: any[]) {
-    this.iModel = iModel;
+  public constructor(target: { iModel: IModelDb }, ..._args: any[]) {
+    this.iModel = target.iModel;
   }
   public get ctor(): EditCommandType {
     return this.constructor as EditCommandType;
@@ -68,7 +68,7 @@ class EditorAppHandler extends IpcHandler implements EditorIpc {
     if (undefined === commandClass)
       throw new IModelError(IModelStatus.NotRegistered, `Command not registered [${commandId}]`);
 
-    return EditCommandAdmin.runCommand(new commandClass(IModelDb.findByKey(iModelKey), ...args));
+    return EditCommandAdmin.runCommand(new commandClass({ iModel: IModelDb.findByKey(iModelKey) }, ...args));
   }
 
   public async callMethod(methodName: string, ...args: any[]) {

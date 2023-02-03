@@ -17,8 +17,6 @@ import { EditCommand } from "./EditCommand";
 export class BasicManipulationCommand extends EditCommand implements BasicManipulationCommandIpc {
   public static override commandId = editorBuiltInCmdIds.cmdBasicManipulation;
 
-  public constructor(iModel: IModelDb, protected _str: string) { super(iModel); }
-
   public override async onStart() { return BasicManipulationCommand.commandId; }
 
   public async deleteElements(ids: CompressedId64Set): Promise<IModelStatus> {
@@ -309,7 +307,7 @@ enum QuerySubEntity {
   RedundantEdge = 5,
 }
 
-interface QuerySubEntityRequestProps  {
+interface QuerySubEntityRequestProps {
   /** Sub-entity to test */
   subEntity: SubEntityProps;
   /** What to check */
@@ -331,7 +329,7 @@ enum QueryBody {
   PlanarBody = 4,
 }
 
-interface QueryBodyRequestProps  {
+interface QueryBodyRequestProps {
   /** Geometric primitive index to test */
   index: number;
   /** What to check */
@@ -360,7 +358,7 @@ interface ConnectedSubEntityRequestProps {
   onResult: SubEntityArrayFunction;
 }
 
-interface LocateSubEntityRequestProps  {
+interface LocateSubEntityRequestProps {
   /** Space point for boresite origin */
   point: XYZProps;
   /** Vector for boresite direction */
@@ -447,7 +445,7 @@ interface ElementGeometryCacheOperationRequestProps {
   /** Requested operation */
   op: OperationType;
   /** Parameters for operation */
-  params?: GeometrySummaryRequestProps | SubEntityGeometryRequestProps | SubEntityParameterRangeRequestProps | SubEntityEvaluateRequestProps | QuerySubEntityRequestProps | QueryBodyRequestProps | BodySubEntitiesRequestProps | ConnectedSubEntityRequestProps | LocateSubEntityRequestProps | LocateFaceRequestProps | ClosestSubEntityRequestProps | ClosestPointRequestProps | PointInsideRequestProps| BooleanOperationProps | SewSheetProps | ThickenSheetProps | CutProps | EmbossProps | ImprintProps | SweepPathProps | LoftProps | OffsetFacesProps | OffsetEdgesProps | HollowFacesProps | SweepFacesProps | SpinFacesProps | DeleteSubEntityProps | TransformSubEntityProps | BlendEdgesProps | ChamferEdgesProps;
+  params?: GeometrySummaryRequestProps | SubEntityGeometryRequestProps | SubEntityParameterRangeRequestProps | SubEntityEvaluateRequestProps | QuerySubEntityRequestProps | QueryBodyRequestProps | BodySubEntitiesRequestProps | ConnectedSubEntityRequestProps | LocateSubEntityRequestProps | LocateFaceRequestProps | ClosestSubEntityRequestProps | ClosestPointRequestProps | PointInsideRequestProps | BooleanOperationProps | SewSheetProps | ThickenSheetProps | CutProps | EmbossProps | ImprintProps | SweepPathProps | LoftProps | OffsetFacesProps | OffsetEdgesProps | HollowFacesProps | SweepFacesProps | SpinFacesProps | DeleteSubEntityProps | TransformSubEntityProps | BlendEdgesProps | ChamferEdgesProps;
   /** Callback for result when element's geometry stream is requested in flatbuffer or graphic formats */
   onGeometry?: ElementGeometryFunction;
 }
@@ -872,7 +870,7 @@ export class SolidModelingCommand extends BasicManipulationCommand implements So
 
   public async imprintBody(id: Id64String, params: ImprintProps, opts: ElementGeometryResultOptions): Promise<ElementGeometryResultProps | undefined> {
     const props: ElementGeometryCacheOperationRequestProps = { id, op: OperationType.Imprint, params };
-    return this.doElementGeometryOperation(props, opts, !params.keepProfile && "string" === typeof(params.imprint) ? params.imprint : undefined);
+    return this.doElementGeometryOperation(props, opts, !params.keepProfile && "string" === typeof (params.imprint) ? params.imprint : undefined);
   }
 
   public async sweepAlongPath(id: Id64String, params: SweepPathProps, opts: ElementGeometryResultOptions): Promise<ElementGeometryResultProps | undefined> {
