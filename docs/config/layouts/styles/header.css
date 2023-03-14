@@ -204,7 +204,7 @@ header #search-component input[type="search"]::placeholder {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   :root {
     --left-margin: 20px;
     --space-unit: 10px;
@@ -234,9 +234,8 @@ header #search-component input[type="search"]::placeholder {
   #main-nav.cooked {
     background: var(--itwin-gradient);
     width: 100%;
-    height: 150px;
-    padding-left: 27px;
-    padding-top: 20px;
+    height: auto;
+    padding: 20px 0 20px 27px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
