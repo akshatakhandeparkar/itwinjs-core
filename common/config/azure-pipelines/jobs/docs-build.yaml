@@ -84,7 +84,7 @@ jobs:
           useCurrentPresentationDocsArtifact: ${{ parameters.useCurrentPresentationDocsArtifact }}
 
       # Currently BeMetalsmith is an internal only tool
-      - script: npm install @bentley/bemetalsmith@4.3.x --legacy-peer-deps
+      - script: npm install @bentley/bemetalsmith@5.0.1-dev.1
         displayName: Install BeMetalsmith
         workingDirectory: ${{ parameters.workingDir }}
 
