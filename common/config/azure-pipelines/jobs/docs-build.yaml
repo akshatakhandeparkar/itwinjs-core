@@ -96,12 +96,10 @@ jobs:
       - publish: ${{ parameters.stagingDir }}/config/.updated.json
         artifact: .updated.json
         displayName: Publish Pipeline Artifact - .updated.json
-        condition: and(succeeded(), eq('${{ parameters.shouldPublish }}', true))
 
       - publish: ${{ parameters.outputDir }}
         artifact: DocsBuild
         displayName: Publish Pipeline Artifact - DocsBuild
-        condition: and(succeeded(), eq('${{ parameters.shouldPublish }}', true))
 
       - powershell: |
           $commitMsg = "$(Build.SourceVersionMessage)"
