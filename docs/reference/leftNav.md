@@ -19,7 +19,8 @@ packageClassification:  [
          "frontend-devtools",
          "hypermodeling-frontend",
          "webgl-compatibility",
-         "map-layers-formats"
+         "map-layers-formats",
+         "auth-clients"
       ]
    },
    {

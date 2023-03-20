@@ -1,0 +1,207 @@
+{
+  "name": "@itwin/electron-authorization",
+  "entries": [
+    {
+      "version": "0.12.0",
+      "tag": "@itwin/electron-authorization_v0.12.0",
+      "date": "Tue, 14 Mar 2023 20:05:10 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Replace npm open package for electron.shell.openPath"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Drop support for Node 12, Node 14 and Node 16."
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.11.0",
+      "tag": "@itwin/electron-authorization_v0.11.0",
+      "date": "Thu, 23 Feb 2023 22:01:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Drop support for Electron 14, 15, 16, 17, 22. Start supporting Electron 23."
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.10.1",
+      "tag": "@itwin/electron-authorization_v0.10.1",
+      "date": "Tue, 10 Jan 2023 15:45:09 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Enabled linux usage for tokenstore"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.10.0",
+      "tag": "@itwin/electron-authorization_v0.10.0",
+      "date": "Tue, 03 Jan 2023 21:06:26 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Update minimum iTwin.js version to 3.3.0"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.9.0",
+      "tag": "@itwin/electron-authorization_v0.9.0",
+      "date": "Fri, 23 Dec 2022 16:03:26 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "fix for minor documentation inconsistencies"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Add Electron 22 as supported Electron version."
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.5",
+      "tag": "@itwin/electron-authorization_v0.8.5",
+      "date": "Thu, 25 Aug 2022 13:58:56 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Add Electron as peer dependency."
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.4",
+      "tag": "@itwin/electron-authorization_v0.8.4",
+      "date": "Tue, 03 May 2022 00:43:48 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Include issuerUrl in Electron client TokenStore key"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.3",
+      "tag": "@itwin/electron-authorization_v0.8.3",
+      "date": "Wed, 02 Feb 2022 20:20:14 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update keytar version"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.2",
+      "tag": "@itwin/electron-authorization_v0.8.2",
+      "date": "Tue, 01 Feb 2022 18:01:38 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update invalid \"this\" reference"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.1",
+      "tag": "@itwin/electron-authorization_v0.8.1",
+      "date": "Tue, 25 Jan 2022 15:34:41 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update core dependencies"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.8.0",
+      "tag": "@itwin/electron-authorization_v0.8.0",
+      "date": "Mon, 24 Jan 2022 19:35:01 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Update to use iTwin.js 3.0 official release"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.7.0",
+      "tag": "@itwin/electron-authorization_v0.7.0",
+      "date": "Fri, 17 Dec 2021 19:52:59 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Replaced initialize with silent signin"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.6.0",
+      "tag": "@itwin/electron-authorization_v0.6.0",
+      "date": "Wed, 15 Dec 2021 20:20:04 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "pin deps to core rc"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.5.1",
+      "tag": "@itwin/electron-authorization_v0.5.1",
+      "date": "Thu, 02 Dec 2021 18:07:16 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Automatically adds offline_access scope if not already included"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.5.0",
+      "tag": "@itwin/electron-authorization_v0.5.0",
+      "date": "Mon, 29 Nov 2021 22:10:32 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Renaming barrel files to match electron naming scheme"
+          }
+        ]
+      }
+    },
+    {
+      "version": "0.4.0",
+      "tag": "@itwin/electron-authorization_v0.4.0",
+      "date": "Mon, 29 Nov 2021 15:30:19 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Changed ElectronAuthorizationBackend name to ElectronAuthorizationMain and ElectronAppAuthorization to ElectronAuthorizationRenderer"
+          }
+        ]
+      }
+    }
+  ]
+}

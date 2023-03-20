@@ -28,6 +28,13 @@ steps:
     displayName: Copy Reference files to Staging
     workingDirectory: ${{ parameters.workingDir }}
 
+  # - task: CopyFiles@2
+  #   displayName: Copy Temp Auth-Clients Docs to staging
+  #   inputs:
+  #     SourceFolder: ${{ parameters.workingDir }}/docs/auth-clients
+  #     TargetFolder: ${{ parameters.stagingDir }}
+  #     OverWrite: true
+
   # Download AppUI Docs artifact
   - ${{ if eq(parameters.useCurrentAppUIDocsArtifact, true) }}:
     - download: current

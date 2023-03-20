@@ -1,0 +1,2729 @@
+{
+  "id": 0,
+  "name": "@itwin/electron-authorization",
+  "kind": 1,
+  "flags": {},
+  "originalName": "",
+  "children": [
+    {
+      "id": 4,
+      "name": "Authentication",
+      "kind": 2,
+      "kindString": "Module",
+      "flags": {},
+      "comment": {},
+      "originalName": "main/Client",
+      "children": [
+        {
+          "id": 107,
+          "name": "ElectronAuthorizationEvents",
+          "kind": 128,
+          "kindString": "Class",
+          "flags": {},
+          "comment": {
+            "shortText": "Internal events used by authorization by DesktopAuthorizationClient and related classes",
+            "tags": [
+              {
+                "tag": "internal",
+                "text": "\n"
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 108,
+              "name": "constructor",
+              "kind": 512,
+              "kindString": "Constructor",
+              "flags": {},
+              "signatures": [
+                {
+                  "id": 109,
+                  "name": "new ElectronAuthorizationEvents",
+                  "kind": 16384,
+                  "kindString": "Constructor signature",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "id": 107,
+                    "name": "ElectronAuthorizationEvents"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 111,
+              "name": "onAuthorizationResponse",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isPublic": true,
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "Event raised when a response is received from the authorization server with the authorization code"
+              },
+              "sources": [
+                {
+                  "fileName": "main/Events.ts",
+                  "line": 29,
+                  "character": 18
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "typeArguments": [
+                  {
+                    "type": "reference",
+                    "id": 102,
+                    "name": "AuthorizationResponseListener"
+                  }
+                ],
+                "qualifiedName": "BeEvent",
+                "package": ".pnpm",
+                "name": "BeEvent"
+              },
+              "defaultValue": "..."
+            },
+            {
+              "id": 110,
+              "name": "onAuthorizationResponseCompleted",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isPublic": true,
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "Event raised when the authorization is completed"
+              },
+              "sources": [
+                {
+                  "fileName": "main/Events.ts",
+                  "line": 26,
+                  "character": 18
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "typeArguments": [
+                  {
+                    "type": "reference",
+                    "id": 98,
+                    "name": "AuthorizationResponseCompletedListener"
+                  }
+                ],
+                "qualifiedName": "BeEvent",
+                "package": ".pnpm",
+                "name": "BeEvent"
+              },
+              "defaultValue": "..."
+            }
+          ],
+          "groups": [
+            {
+              "title": "Constructors",
+              "kind": 512,
+              "children": [108]
+            },
+            {
+              "title": "Properties",
+              "kind": 1024,
+              "children": [111, 110]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "main/Events.ts",
+              "line": 24,
+              "character": 13
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "ElectronMainAuthorization",
+          "kind": 128,
+          "kindString": "Class",
+          "flags": {},
+          "comment": {
+            "shortText": "Utility to generate OIDC/OAuth tokens for Desktop Applications",
+            "tags": [
+              {
+                "tag": "beta",
+                "text": "\n"
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 16,
+              "name": "constructor",
+              "kind": 512,
+              "kindString": "Constructor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 98,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 17,
+                  "name": "new ElectronMainAuthorization",
+                  "kind": 16384,
+                  "kindString": "Constructor signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 18,
+                      "name": "config",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "id": 5,
+                        "name": "ElectronMainAuthorizationConfiguration"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "reference",
+                    "id": 11,
+                    "name": "ElectronMainAuthorization"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "name": "_accessToken",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isProtected": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 82,
+                  "character": 12
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              },
+              "defaultValue": "\"\""
+            },
+            {
+              "id": 12,
+              "name": "onUserStateChanged",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isPublic": true,
+                "isStatic": true,
+                "isReadonly": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 166,
+                  "character": 25
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "typeArguments": [
+                  {
+                    "type": "reflection",
+                    "declaration": {
+                      "id": 13,
+                      "name": "__type",
+                      "kind": 65536,
+                      "kindString": "Type literal",
+                      "flags": {},
+                      "signatures": [
+                        {
+                          "id": 14,
+                          "name": "__type",
+                          "kind": 4096,
+                          "kindString": "Call signature",
+                          "flags": {},
+                          "parameters": [
+                            {
+                              "id": 15,
+                              "name": "token",
+                              "kind": 32768,
+                              "kindString": "Parameter",
+                              "flags": {},
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "string"
+                              }
+                            }
+                          ],
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "void"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "qualifiedName": "BeEvent",
+                "package": ".pnpm",
+                "name": "BeEvent"
+              },
+              "defaultValue": "..."
+            },
+            {
+              "id": 41,
+              "name": "issuerUrl",
+              "kind": 262144,
+              "kindString": "Accessor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 174,
+                  "character": 13
+                }
+              ],
+              "getSignature": [
+                {
+                  "id": 42,
+                  "name": "issuerUrl",
+                  "kind": 524288,
+                  "kindString": "Get signature",
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 43,
+              "name": "redirectUri",
+              "kind": 262144,
+              "kindString": "Accessor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 178,
+                  "character": 13
+                }
+              ],
+              "getSignature": [
+                {
+                  "id": 44,
+                  "name": "redirectUri",
+                  "kind": 524288,
+                  "kindString": "Get signature",
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 39,
+              "name": "scope",
+              "kind": 262144,
+              "kindString": "Accessor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 170,
+                  "character": 13
+                }
+              ],
+              "getSignature": [
+                {
+                  "id": 40,
+                  "name": "scope",
+                  "kind": 524288,
+                  "kindString": "Get signature",
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 29,
+              "name": "tokenStore",
+              "kind": 262144,
+              "kindString": "Accessor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 94,
+                  "character": 13
+                }
+              ],
+              "getSignature": [
+                {
+                  "id": 30,
+                  "name": "tokenStore",
+                  "kind": 524288,
+                  "kindString": "Get signature",
+                  "flags": {},
+                  "type": {
+                    "type": "union",
+                    "types": [
+                      {
+                        "type": "intrinsic",
+                        "name": "undefined"
+                      },
+                      {
+                        "type": "reference",
+                        "id": 133,
+                        "name": "ElectronTokenStore"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "id": 70,
+              "name": "getAccessToken",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 418,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 71,
+                  "name": "getAccessToken",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  },
+                  "implementationOf": {
+                    "type": "reference",
+                    "name": "AuthorizationClient.getAccessToken"
+                  }
+                }
+              ],
+              "implementationOf": {
+                "type": "reference",
+                "name": "AuthorizationClient.getAccessToken"
+              }
+            },
+            {
+              "id": 48,
+              "name": "refreshToken",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 190,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 49,
+                  "name": "refreshToken",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Forces a refresh of the user's access token regardless if the current token has expired."
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 45,
+              "name": "setAccessToken",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 182,
+                  "character": 9
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 46,
+                  "name": "setAccessToken",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 47,
+                      "name": "token",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 52,
+              "name": "signIn",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 228,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 53,
+                  "name": "signIn",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Initializes and completes the sign-in process for the user.",
+                    "text": "Once the promise is returned, use [[ElectronMainAuthorization.getAccessToken]] to retrieve the token.\n\nThe following actions happen upon completion of the promise:\n- calls the onUserStateChanged() call back after the authorization completes\nor if there is an error.\n- will attempt in order:\n  (i) load any existing authorized user from storage,\n  (ii) an interactive signin that requires user input.\n"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 54,
+              "name": "signInSilent",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 318,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 55,
+                  "name": "signInSilent",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Attempts a silent sign in with the authorization provider"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 61,
+              "name": "signOut",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 386,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 62,
+                  "name": "signOut",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Signs out the current user.",
+                    "text": "The following actions happen upon completion:\n\n- calls the onUserStateChanged() call back after the signout completes without error.\n"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "title": "Constructors",
+              "kind": 512,
+              "children": [16]
+            },
+            {
+              "title": "Properties",
+              "kind": 1024,
+              "children": [19, 12]
+            },
+            {
+              "title": "Accessors",
+              "kind": 262144,
+              "children": [41, 43, 39, 29]
+            },
+            {
+              "title": "Methods",
+              "kind": 2048,
+              "children": [70, 48, 45, 52, 54, 61]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "main/Client.ts",
+              "line": 81,
+              "character": 13
+            }
+          ],
+          "implementedTypes": [
+            {
+              "type": "reference",
+              "qualifiedName": "AuthorizationClient",
+              "package": ".pnpm",
+              "name": "AuthorizationClient"
+            }
+          ]
+        },
+        {
+          "id": 85,
+          "name": "ElectronMainAuthorizationRequestHandler",
+          "kind": 128,
+          "kindString": "Class",
+          "flags": {},
+          "comment": {
+            "shortText": "Utility to setup a local web server that listens to authorization responses to the browser and make the necessary redirections",
+            "tags": [
+              {
+                "tag": "internal",
+                "text": "\n"
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 86,
+              "name": "constructor",
+              "kind": 512,
+              "kindString": "Constructor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/ElectronMainAuthorizationRequestHandler.ts",
+                  "line": 33,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 87,
+                  "name": "new ElectronMainAuthorizationRequestHandler",
+                  "kind": 16384,
+                  "kindString": "Constructor signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Constructor"
+                  },
+                  "parameters": [
+                    {
+                      "id": 88,
+                      "name": "authorizationEvents",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "id": 107,
+                        "name": "ElectronAuthorizationEvents"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "reference",
+                    "id": 85,
+                    "name": "ElectronMainAuthorizationRequestHandler"
+                  },
+                  "overwrites": {
+                    "type": "reference",
+                    "name": "AuthorizationRequestHandler.constructor"
+                  }
+                }
+              ],
+              "overwrites": {
+                "type": "reference",
+                "name": "AuthorizationRequestHandler.constructor"
+              }
+            },
+            {
+              "id": 95,
+              "name": "completeAuthorizationRequest",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isProtected": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/ElectronMainAuthorizationRequestHandler.ts",
+                  "line": 75,
+                  "character": 18
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 96,
+                  "name": "completeAuthorizationRequest",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Checks if an authorization flow can be completed, and completes it.\nThe handler returns a `Promise<AuthorizationRequestResponse>` if ready, or a `Promise<null>`\nif not ready."
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "union",
+                        "types": [
+                          {
+                            "type": "literal",
+                            "value": null
+                          },
+                          {
+                            "type": "reference",
+                            "qualifiedName": "AuthorizationRequestResponse",
+                            "package": ".pnpm",
+                            "name": "AuthorizationRequestResponse"
+                          }
+                        ]
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  },
+                  "overwrites": {
+                    "type": "reference",
+                    "name": "AuthorizationRequestHandler.completeAuthorizationRequest"
+                  }
+                }
+              ],
+              "overwrites": {
+                "type": "reference",
+                "name": "AuthorizationRequestHandler.completeAuthorizationRequest"
+              }
+            },
+            {
+              "id": 91,
+              "name": "performAuthorizationRequest",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/ElectronMainAuthorizationRequestHandler.ts",
+                  "line": 41,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 92,
+                  "name": "performAuthorizationRequest",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Makes an authorization request on the system browser"
+                  },
+                  "parameters": [
+                    {
+                      "id": 93,
+                      "name": "serviceConfiguration",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "qualifiedName": "AuthorizationServiceConfiguration",
+                        "package": ".pnpm",
+                        "name": "AuthorizationServiceConfiguration"
+                      }
+                    },
+                    {
+                      "id": 94,
+                      "name": "authRequest",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "qualifiedName": "AuthorizationRequest",
+                        "package": ".pnpm",
+                        "name": "AuthorizationRequest"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  },
+                  "overwrites": {
+                    "type": "reference",
+                    "name": "AuthorizationRequestHandler.performAuthorizationRequest"
+                  }
+                }
+              ],
+              "overwrites": {
+                "type": "reference",
+                "name": "AuthorizationRequestHandler.performAuthorizationRequest"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "title": "Constructors",
+              "kind": 512,
+              "children": [86]
+            },
+            {
+              "title": "Methods",
+              "kind": 2048,
+              "children": [95, 91]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "main/ElectronMainAuthorizationRequestHandler.ts",
+              "line": 26,
+              "character": 13
+            }
+          ],
+          "extendedTypes": [
+            {
+              "type": "reference",
+              "qualifiedName": "AuthorizationRequestHandler",
+              "package": ".pnpm",
+              "name": "AuthorizationRequestHandler"
+            }
+          ]
+        },
+        {
+          "id": 133,
+          "name": "ElectronTokenStore",
+          "kind": 128,
+          "kindString": "Class",
+          "flags": {},
+          "comment": {
+            "shortText": "Utility to store OIDC AppAuth in secure storage",
+            "tags": [
+              {
+                "tag": "internal",
+                "text": "\n"
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 134,
+              "name": "constructor",
+              "kind": 512,
+              "kindString": "Constructor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/TokenStore.ts",
+                  "line": 23,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 135,
+                  "name": "new ElectronTokenStore",
+                  "kind": 16384,
+                  "kindString": "Constructor signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 136,
+                      "name": "appStorageKey",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "reference",
+                    "id": 133,
+                    "name": "ElectronTokenStore"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 146,
+              "name": "delete",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/TokenStore.ts",
+                  "line": 64,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 147,
+                  "name": "delete",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Delete token after signout"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 141,
+              "name": "load",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/TokenStore.ts",
+                  "line": 35,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 142,
+                  "name": "load",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Load token if available"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "union",
+                        "types": [
+                          {
+                            "type": "intrinsic",
+                            "name": "undefined"
+                          },
+                          {
+                            "type": "reference",
+                            "qualifiedName": "TokenResponse",
+                            "package": ".pnpm",
+                            "name": "TokenResponse"
+                          }
+                        ]
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 143,
+              "name": "save",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/TokenStore.ts",
+                  "line": 50,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 144,
+                  "name": "save",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Save token after signin"
+                  },
+                  "parameters": [
+                    {
+                      "id": 145,
+                      "name": "tokenResponse",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "qualifiedName": "TokenResponse",
+                        "package": ".pnpm",
+                        "name": "TokenResponse"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "title": "Constructors",
+              "kind": 512,
+              "children": [134]
+            },
+            {
+              "title": "Methods",
+              "kind": 2048,
+              "children": [146, 141, 143]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "main/TokenStore.ts",
+              "line": 20,
+              "character": 13
+            }
+          ]
+        },
+        {
+          "id": 113,
+          "name": "LoopbackWebServer",
+          "kind": 128,
+          "kindString": "Class",
+          "flags": {},
+          "comment": {
+            "shortText": "Web server to listen to authorization requests/responses for the DesktopAuthorizationClient",
+            "tags": [
+              {
+                "tag": "internal",
+                "text": "\n"
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 130,
+              "name": "constructor",
+              "kind": 512,
+              "kindString": "Constructor",
+              "flags": {},
+              "signatures": [
+                {
+                  "id": 131,
+                  "name": "new LoopbackWebServer",
+                  "kind": 16384,
+                  "kindString": "Constructor signature",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "id": 113,
+                    "name": "LoopbackWebServer"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 120,
+              "name": "addCorrelationState",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true,
+                "isStatic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/LoopbackWebServer.ts",
+                  "line": 60,
+                  "character": 16
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 121,
+                  "name": "addCorrelationState",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Add to the authorization state so that the correct response data is used for each request"
+                  },
+                  "parameters": [
+                    {
+                      "id": 122,
+                      "name": "state",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    },
+                    {
+                      "id": 123,
+                      "name": "authEvents",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "id": 107,
+                        "name": "ElectronAuthorizationEvents"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 117,
+              "name": "start",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true,
+                "isStatic": true
+              },
+              "sources": [
+                {
+                  "fileName": "main/LoopbackWebServer.ts",
+                  "line": 49,
+                  "character": 16
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 118,
+                  "name": "start",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Start a web server to listen to the browser requests"
+                  },
+                  "parameters": [
+                    {
+                      "id": 119,
+                      "name": "redirectUrl",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "title": "Constructors",
+              "kind": 512,
+              "children": [130]
+            },
+            {
+              "title": "Methods",
+              "kind": 2048,
+              "children": [120, 117]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "main/LoopbackWebServer.ts",
+              "line": 43,
+              "character": 13
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "ElectronMainAuthorizationConfiguration",
+          "kind": 256,
+          "kindString": "Interface",
+          "flags": {},
+          "comment": {
+            "shortText": "Client configuration to generate OIDC/OAuth tokens for native applications",
+            "tags": [
+              {
+                "tag": "beta",
+                "text": "\n"
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 8,
+              "name": "clientId",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "Client application's identifier as registered with the OIDC/OAuth2 provider."
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 63,
+                  "character": 11
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            },
+            {
+              "id": 10,
+              "name": "expiryBuffer",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isOptional": true,
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "Time in seconds that's used as a buffer to check the token for validity/expiry.\nThe checks for authorization, and refreshing access tokens all use this buffer - i.e., the token is considered expired if the current time is within the specified\ntime of the actual expiry.",
+                "tags": [
+                  {
+                    "tag": "note",
+                    "text": "If unspecified this defaults to 10 minutes.\n"
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 74,
+                  "character": 11
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "number"
+              }
+            },
+            {
+              "id": 6,
+              "name": "issuerUrl",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isOptional": true,
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "The OAuth token issuer URL. Defaults to Bentley's auth URL if undefined."
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 54,
+                  "character": 11
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            },
+            {
+              "id": 7,
+              "name": "redirectUri",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isOptional": true,
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "Upon signing in, the client application receives a response from the Bentley IMS OIDC/OAuth2 provider at this URI\nFor mobile/desktop applications, must start with `http://localhost:${redirectPort}` or `https://localhost:${redirectPort}`"
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 60,
+                  "character": 11
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            },
+            {
+              "id": 9,
+              "name": "scope",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isReadonly": true
+              },
+              "comment": {
+                "shortText": "List of space separated scopes to request access to various resources."
+              },
+              "sources": [
+                {
+                  "fileName": "main/Client.ts",
+                  "line": 66,
+                  "character": 11
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "title": "Properties",
+              "kind": 1024,
+              "children": [8, 10, 6, 7, 9]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "main/Client.ts",
+              "line": 50,
+              "character": 17
+            }
+          ]
+        },
+        {
+          "id": 98,
+          "name": "AuthorizationResponseCompletedListener",
+          "kind": 4194304,
+          "kindString": "Type alias",
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "main/Events.ts",
+              "line": 15,
+              "character": 12
+            }
+          ],
+          "type": {
+            "type": "reflection",
+            "declaration": {
+              "id": 99,
+              "name": "__type",
+              "kind": 65536,
+              "kindString": "Type literal",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "main/Events.ts",
+                  "line": 15,
+                  "character": 53
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 100,
+                  "name": "__type",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "tags": [
+                      {
+                        "tag": "internal",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "parameters": [
+                    {
+                      "id": 101,
+                      "name": "error",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {
+                        "isOptional": true
+                      },
+                      "type": {
+                        "type": "reference",
+                        "qualifiedName": "AuthorizationErrorJson",
+                        "package": ".pnpm",
+                        "name": "AuthorizationErrorJson"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": 102,
+          "name": "AuthorizationResponseListener",
+          "kind": 4194304,
+          "kindString": "Type alias",
+          "flags": {},
+          "sources": [
+            {
+              "fileName": "main/Events.ts",
+              "line": 18,
+              "character": 12
+            }
+          ],
+          "type": {
+            "type": "reflection",
+            "declaration": {
+              "id": 103,
+              "name": "__type",
+              "kind": 65536,
+              "kindString": "Type literal",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "main/Events.ts",
+                  "line": 18,
+                  "character": 44
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 104,
+                  "name": "__type",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "tags": [
+                      {
+                        "tag": "internal",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "parameters": [
+                    {
+                      "id": 105,
+                      "name": "error",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "union",
+                        "types": [
+                          {
+                            "type": "reference",
+                            "qualifiedName": "AuthorizationErrorJson",
+                            "package": ".pnpm",
+                            "name": "AuthorizationErrorJson"
+                          },
+                          {
+                            "type": "literal",
+                            "value": null
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": 106,
+                      "name": "response",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "union",
+                        "types": [
+                          {
+                            "type": "reference",
+                            "qualifiedName": "AuthorizationResponseJson",
+                            "package": ".pnpm",
+                            "name": "AuthorizationResponseJson"
+                          },
+                          {
+                            "type": "literal",
+                            "value": null
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "groups": [
+        {
+          "title": "Classes",
+          "kind": 128,
+          "children": [107, 11, 85, 133, 113]
+        },
+        {
+          "title": "Interfaces",
+          "kind": 256,
+          "children": [5]
+        },
+        {
+          "title": "Type Aliases",
+          "kind": 4194304,
+          "children": [98, 102]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "main/Client.ts",
+          "line": 14,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "ElectronMain",
+      "kind": 2,
+      "kindString": "Module",
+      "flags": {},
+      "children": [
+        {
+          "id": 205,
+          "name": "ElectronMainAuthorization",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 11
+        },
+        {
+          "id": 204,
+          "name": "ElectronMainAuthorizationConfiguration",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 5
+        }
+      ],
+      "groups": [
+        {
+          "title": "References",
+          "kind": 16777216,
+          "children": [205, 204]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "ElectronMain.ts",
+          "line": 6,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ElectronRenderer",
+      "kind": 2,
+      "kindString": "Module",
+      "flags": {},
+      "children": [
+        {
+          "id": 206,
+          "name": "ElectronAuthIPCChannelNames",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 149
+        },
+        {
+          "id": 207,
+          "name": "ElectronRendererAuthorization",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 155
+        }
+      ],
+      "groups": [
+        {
+          "title": "References",
+          "kind": 16777216,
+          "children": [206, 207]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "ElectronRenderer.ts",
+          "line": 6,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "index",
+      "kind": 2,
+      "kindString": "Module",
+      "flags": {},
+      "children": [
+        {
+          "id": 211,
+          "name": "AuthorizationResponseCompletedListener",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 98
+        },
+        {
+          "id": 212,
+          "name": "AuthorizationResponseListener",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 102
+        },
+        {
+          "id": 216,
+          "name": "ElectronAuthIPCChannelNames",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 149
+        },
+        {
+          "id": 213,
+          "name": "ElectronAuthorizationEvents",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 107
+        },
+        {
+          "id": 209,
+          "name": "ElectronMainAuthorization",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 11
+        },
+        {
+          "id": 208,
+          "name": "ElectronMainAuthorizationConfiguration",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 5
+        },
+        {
+          "id": 210,
+          "name": "ElectronMainAuthorizationRequestHandler",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 85
+        },
+        {
+          "id": 217,
+          "name": "ElectronRendererAuthorization",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 155
+        },
+        {
+          "id": 215,
+          "name": "ElectronTokenStore",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 133
+        },
+        {
+          "id": 218,
+          "name": "ITwinElectronApi",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 179
+        },
+        {
+          "id": 214,
+          "name": "LoopbackWebServer",
+          "kind": 16777216,
+          "kindString": "Reference",
+          "flags": {},
+          "target": 113
+        }
+      ],
+      "groups": [
+        {
+          "title": "References",
+          "kind": 16777216,
+          "children": [211, 212, 216, 213, 209, 208, 210, 217, 215, 218, 214]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "index.ts",
+          "line": 1,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "name": "renderer/Client",
+      "kind": 2,
+      "kindString": "Module",
+      "flags": {},
+      "children": [
+        {
+          "id": 149,
+          "name": "ElectronAuthIPCChannelNames",
+          "kind": 8,
+          "kindString": "Enumeration",
+          "flags": {},
+          "comment": {
+            "tags": [
+              {
+                "tag": "internal",
+                "text": ""
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": 152,
+              "name": "getAccessToken",
+              "kind": 16,
+              "kindString": "Enumeration Member",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 14,
+                  "character": 2
+                }
+              ],
+              "type": {
+                "type": "literal",
+                "value": "itwin.electron.auth.getAccessToken"
+              },
+              "defaultValue": "\"itwin.electron.auth.getAccessToken\""
+            },
+            {
+              "id": 153,
+              "name": "onAccessTokenChanged",
+              "kind": 16,
+              "kindString": "Enumeration Member",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 15,
+                  "character": 2
+                }
+              ],
+              "type": {
+                "type": "literal",
+                "value": "itwin.electron.auth.onAccessTokenChanged"
+              },
+              "defaultValue": "\"itwin.electron.auth.onAccessTokenChanged\""
+            },
+            {
+              "id": 154,
+              "name": "onAccessTokenExpirationChanged",
+              "kind": 16,
+              "kindString": "Enumeration Member",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 16,
+                  "character": 2
+                }
+              ],
+              "type": {
+                "type": "literal",
+                "value": "itwin.electron.auth.onAccessTokenExpirationChanged"
+              },
+              "defaultValue": "\"itwin.electron.auth.onAccessTokenExpirationChanged\""
+            },
+            {
+              "id": 150,
+              "name": "signIn",
+              "kind": 16,
+              "kindString": "Enumeration Member",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 12,
+                  "character": 2
+                }
+              ],
+              "type": {
+                "type": "literal",
+                "value": "itwin.electron.auth.signIn"
+              },
+              "defaultValue": "\"itwin.electron.auth.signIn\""
+            },
+            {
+              "id": 151,
+              "name": "signOut",
+              "kind": 16,
+              "kindString": "Enumeration Member",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 13,
+                  "character": 2
+                }
+              ],
+              "type": {
+                "type": "literal",
+                "value": "itwin.electron.auth.signOut"
+              },
+              "defaultValue": "\"itwin.electron.auth.signOut\""
+            }
+          ],
+          "groups": [
+            {
+              "title": "Enumeration Members",
+              "kind": 16,
+              "children": [152, 153, 154, 150, 151]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "renderer/Client.ts",
+              "line": 11,
+              "character": 12
+            }
+          ]
+        },
+        {
+          "id": 155,
+          "name": "ElectronRendererAuthorization",
+          "kind": 128,
+          "kindString": "Class",
+          "flags": {
+            "isPublic": true
+          },
+          "comment": {
+            "shortText": "Object to be set as `IModelApp.authorizationClient` for the frontend of ElectronApps.\nSince Electron Apps use the backend for all authorization, this class sends signIn/signOut requests to the backend\nand then gets the access token from the backend."
+          },
+          "children": [
+            {
+              "id": 156,
+              "name": "constructor",
+              "kind": 512,
+              "kindString": "Constructor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 65,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 157,
+                  "name": "new ElectronRendererAuthorization",
+                  "kind": 16384,
+                  "kindString": "Constructor signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Constructor for ElectronRendererAuthorization. Sets up listeners for when the access token changes both on the frontend and the backend."
+                  },
+                  "type": {
+                    "type": "reference",
+                    "id": 155,
+                    "name": "ElectronRendererAuthorization"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 161,
+              "name": "onAccessTokenChanged",
+              "kind": 1024,
+              "kindString": "Property",
+              "flags": {
+                "isPublic": true,
+                "isReadonly": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 57,
+                  "character": 18
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "typeArguments": [
+                  {
+                    "type": "reflection",
+                    "declaration": {
+                      "id": 162,
+                      "name": "__type",
+                      "kind": 65536,
+                      "kindString": "Type literal",
+                      "flags": {},
+                      "signatures": [
+                        {
+                          "id": 163,
+                          "name": "__type",
+                          "kind": 4096,
+                          "kindString": "Call signature",
+                          "flags": {},
+                          "parameters": [
+                            {
+                              "id": 164,
+                              "name": "token",
+                              "kind": 32768,
+                              "kindString": "Parameter",
+                              "flags": {},
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "string"
+                              }
+                            }
+                          ],
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "void"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "qualifiedName": "BeEvent",
+                "package": ".pnpm",
+                "name": "BeEvent"
+              },
+              "defaultValue": "..."
+            },
+            {
+              "id": 165,
+              "name": "hasSignedIn",
+              "kind": 262144,
+              "kindString": "Accessor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 58,
+                  "character": 13
+                }
+              ],
+              "getSignature": [
+                {
+                  "id": 166,
+                  "name": "hasSignedIn",
+                  "kind": 524288,
+                  "kindString": "Get signature",
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "boolean"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 167,
+              "name": "isAuthorized",
+              "kind": 262144,
+              "kindString": "Accessor",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 59,
+                  "character": 13
+                }
+              ],
+              "getSignature": [
+                {
+                  "id": 168,
+                  "name": "isAuthorized",
+                  "kind": 524288,
+                  "kindString": "Get signature",
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "boolean"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 174,
+              "name": "getAccessToken",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 93,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 175,
+                  "name": "getAccessToken",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Returns a promise that resolves to the AccessToken if signed in.\n- The token is ensured to be valid *at least* for the buffer of time specified by the configuration.\n- The token is refreshed if it's possible and necessary.\n- This method must be called to refresh the token - the client does NOT automatically monitor for token expiry.\n- Getting or refreshing the token will trigger the [[onAccessTokenChanged]] event."
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  },
+                  "implementationOf": {
+                    "type": "reference",
+                    "name": "AuthorizationClient.getAccessToken"
+                  }
+                }
+              ],
+              "implementationOf": {
+                "type": "reference",
+                "name": "AuthorizationClient.getAccessToken"
+              }
+            },
+            {
+              "id": 170,
+              "name": "signIn",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 78,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 171,
+                  "name": "signIn",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Called to start the sign-in process. Subscribe to onAccessTokenChanged to be notified when sign-in completes"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 172,
+              "name": "signOut",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {
+                "isPublic": true
+              },
+              "sources": [
+                {
+                  "fileName": "renderer/Client.ts",
+                  "line": 83,
+                  "character": 15
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 173,
+                  "name": "signOut",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "comment": {
+                    "shortText": "Called to start the sign-out process. Subscribe to onAccessTokenChanged to be notified when sign-out completes"
+                  },
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "title": "Constructors",
+              "kind": 512,
+              "children": [156]
+            },
+            {
+              "title": "Properties",
+              "kind": 1024,
+              "children": [161]
+            },
+            {
+              "title": "Accessors",
+              "kind": 262144,
+              "children": [165, 167]
+            },
+            {
+              "title": "Methods",
+              "kind": 2048,
+              "children": [174, 170, 172]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "renderer/Client.ts",
+              "line": 53,
+              "character": 13
+            }
+          ],
+          "implementedTypes": [
+            {
+              "type": "reference",
+              "qualifiedName": "AuthorizationClient",
+              "package": ".pnpm",
+              "name": "AuthorizationClient"
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Enumerations",
+          "kind": 8,
+          "children": [149]
+        },
+        {
+          "title": "Classes",
+          "kind": 128,
+          "children": [155]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "renderer/Client.ts",
+          "line": 5,
+          "character": 0
+        }
+      ]
+    },
+    {
+      "id": 178,
+      "name": "renderer/ElectronPreload",
+      "kind": 2,
+      "kindString": "Module",
+      "flags": {},
+      "children": [
+        {
+          "id": 179,
+          "name": "ITwinElectronApi",
+          "kind": 256,
+          "kindString": "Interface",
+          "flags": {},
+          "comment": {
+            "shortText": "These methods are stored on `window.itwinjs`"
+          },
+          "children": [
+            {
+              "id": 180,
+              "name": "addListener",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/ElectronPreload.ts",
+                  "line": 10,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 181,
+                  "name": "addListener",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 182,
+                      "name": "channel",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    },
+                    {
+                      "id": 183,
+                      "name": "listener",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "name": "ElectronListener"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 188,
+              "name": "invoke",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/ElectronPreload.ts",
+                  "line": 12,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 189,
+                  "name": "invoke",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 190,
+                      "name": "channel",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    },
+                    {
+                      "id": 191,
+                      "name": "data",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {
+                        "isRest": true
+                      },
+                      "type": {
+                        "type": "array",
+                        "elementType": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "reference",
+                    "typeArguments": [
+                      {
+                        "type": "intrinsic",
+                        "name": "any"
+                      }
+                    ],
+                    "qualifiedName": "Promise",
+                    "package": ".pnpm",
+                    "name": "Promise"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 192,
+              "name": "once",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/ElectronPreload.ts",
+                  "line": 13,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 193,
+                  "name": "once",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 194,
+                      "name": "channel",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    },
+                    {
+                      "id": 195,
+                      "name": "listener",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reflection",
+                        "declaration": {
+                          "id": 196,
+                          "name": "__type",
+                          "kind": 65536,
+                          "kindString": "Type literal",
+                          "flags": {},
+                          "signatures": [
+                            {
+                              "id": 197,
+                              "name": "__type",
+                              "kind": 4096,
+                              "kindString": "Call signature",
+                              "flags": {},
+                              "parameters": [
+                                {
+                                  "id": 198,
+                                  "name": "event",
+                                  "kind": 32768,
+                                  "kindString": "Parameter",
+                                  "flags": {},
+                                  "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                  }
+                                },
+                                {
+                                  "id": 199,
+                                  "name": "args",
+                                  "kind": 32768,
+                                  "kindString": "Parameter",
+                                  "flags": {
+                                    "isRest": true
+                                  },
+                                  "type": {
+                                    "type": "array",
+                                    "elementType": {
+                                      "type": "intrinsic",
+                                      "name": "any"
+                                    }
+                                  }
+                                }
+                              ],
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "void"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 184,
+              "name": "removeListener",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/ElectronPreload.ts",
+                  "line": 11,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 185,
+                  "name": "removeListener",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 186,
+                      "name": "channel",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    },
+                    {
+                      "id": 187,
+                      "name": "listener",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "reference",
+                        "name": "ElectronListener"
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            },
+            {
+              "id": 200,
+              "name": "send",
+              "kind": 2048,
+              "kindString": "Method",
+              "flags": {},
+              "sources": [
+                {
+                  "fileName": "renderer/ElectronPreload.ts",
+                  "line": 14,
+                  "character": 2
+                }
+              ],
+              "signatures": [
+                {
+                  "id": 201,
+                  "name": "send",
+                  "kind": 4096,
+                  "kindString": "Call signature",
+                  "flags": {},
+                  "parameters": [
+                    {
+                      "id": 202,
+                      "name": "channel",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {},
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                      }
+                    },
+                    {
+                      "id": 203,
+                      "name": "data",
+                      "kind": 32768,
+                      "kindString": "Parameter",
+                      "flags": {
+                        "isRest": true
+                      },
+                      "type": {
+                        "type": "array",
+                        "elementType": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ],
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "title": "Methods",
+              "kind": 2048,
+              "children": [180, 188, 192, 184, 200]
+            }
+          ],
+          "sources": [
+            {
+              "fileName": "renderer/ElectronPreload.ts",
+              "line": 9,
+              "character": 17
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Interfaces",
+          "kind": 256,
+          "children": [179]
+        }
+      ],
+      "sources": [
+        {
+          "fileName": "renderer/ElectronPreload.ts",
+          "line": 5,
+          "character": 0
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "title": "Modules",
+      "kind": 2,
+      "children": [4, 1, 2, 3, 148, 178]
+    }
+  ],
+  "packageRoot": "packages/electron\\src",
+  "repositoryUrl": "https://github.com/iTwin/auth-clients",
+  "version": "0.12.0"
+}
